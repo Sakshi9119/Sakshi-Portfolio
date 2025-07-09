@@ -4,14 +4,96 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sakshi Tekale | SAP CPI Consultant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
-    header, footer { background: #004d40; color: white; text-align: center; padding: 1rem; }
-    section { padding: 2rem; }
-    h1, h2 { color: #004d40; }
-    .project { background: white; padding: 1rem; margin-bottom: 1rem; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
-    a { color: #00695c; text-decoration: none; }
-    .btn { background: #00695c; color: white; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none; }
+    :root {
+      --primary: #00796b;
+      --secondary: #004d40;
+      --accent: #e0f2f1;
+      --bg: #f9f9f9;
+      --text: #333;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    h2 {
+      font-size: 2rem;
+      color: var(--secondary);
+      margin-bottom: 1rem;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li::before {
+      content: "✔ ";
+      color: var(--primary);
+    }
+    .project {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+    .project:hover {
+      transform: scale(1.02);
+    }
+    .project h3 {
+      color: var(--primary);
+    }
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      background: var(--primary);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: var(--secondary);
+    }
+    footer {
+      background: var(--secondary);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 4rem;
+    }
   </style>
 </head>
 <body>
@@ -23,18 +105,17 @@
 
 <section>
   <h2>About Me</h2>
-  <p>I am an SAP Certified Associate Software Engineer specializing in SAP Cloud Integration. I've worked on complex integration projects including SAP PO to CPI and Boomi to CPI migrations, along with custom solutions involving Groovy scripts and various adapters.</p>
+  <p>I am an SAP Certified Associate Software Engineer with expertise in SAP Cloud Integration. I’ve handled full lifecycle migrations including SAP PO to CPI and Dell Boomi to CPI transitions, custom Groovy enhancements, and adapter-based communication using SFTP, JDBC, and more.</p>
 </section>
 
 <section>
   <h2>Skills</h2>
   <ul>
     <li>SAP Cloud Integration (CPI)</li>
-    <li>Groovy Scripting</li>
-    <li>PO to CPI Migration</li>
-    <li>Boomi to CPI Migration</li>
-    <li>JDBC, IDoc, XI, SFTP, SOAP Adapters</li>
-    <li>PGP Encryption, OAuth2, Certificates</li>
+    <li>Groovy Scripting & Adapter Modules</li>
+    <li>PO and Boomi to CPI Migration</li>
+    <li>OAuth2, PGP Encryption, Certificate Handling</li>
+    <li>Adapters: JDBC, XI, SFTP, IDoc, SOAP</li>
   </ul>
 </section>
 
@@ -42,33 +123,32 @@
   <h2>Projects</h2>
 
   <div class="project">
-    <h3>1. PO to CPI Migration</h3>
-    <p>Migrated legacy SAP PO interfaces to CPI, optimized with Groovy scripts, enhanced monitoring, and secured communication via SFTP and OAuth2.</p>
+    <h3>PO to CPI Migration</h3>
+    <p>Migrated legacy SAP PO interfaces to SAP CPI, refactored logic with Groovy, established secure connections, and enhanced error handling with alerting mechanisms.</p>
   </div>
 
   <div class="project">
-    <h3>2. Boomi to CPI Migration</h3>
-    <p>Collaborated on assessment, shape-to-pallet mapping, error handling strategies, and system dependency documentation for smoother migration.</p>
+    <h3>Boomi to CPI Migration</h3>
+    <p>Conducted detailed analysis of Boomi shapes, mapped to CPI pallet items, and created a reusable framework for faster integration redevelopment.</p>
   </div>
 
   <div class="project">
-    <h3>3. Google Gemini AI Integration</h3>
-    <p>POC for advanced error analysis using AI. Integrated SAP CPI with Gemini API to suggest fixes for failed messages.</p>
+    <h3>Google Gemini AI Error Analyzer</h3>
+    <p>Integrated SAP CPI with Gemini AI to analyze failed messages and suggest automated resolutions for faster issue tracking.</p>
   </div>
-
 </section>
 
 <section>
   <h2>Videos & Articles</h2>
   <ul>
-    <li><a href="https://www.youtube.com/@YourChannel" target="_blank">YouTube Channel – Tutorials on SAP CPI</a></li>
-    <li><a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn Posts on Integration Topics</a></li>
+    <li><a href="https://www.youtube.com/@YourChannel" target="_blank">SAP CPI Tutorials on YouTube</a></li>
+    <li><a href="https://linkedin.com/in/yourprofile" target="_blank">Technical Articles on LinkedIn</a></li>
   </ul>
 </section>
 
 <section>
   <h2>Contact</h2>
-  <p>Email: <a href="mailto:sakshitekale@example.com">sakshitekale@example.com</a></p>
+  <p>📧 Email: <a href="mailto:sakshitekale@example.com">sakshitekale@example.com</a></p>
 </section>
 
 <footer>
